@@ -1,0 +1,11 @@
+.idea
+node_modules/
+coverage/
+dist/
+npm-debug.log*
+.env
+logs/*.txt
+project.iml
+logs-junit/*.xml
+.DS_Store
+.htaccess
