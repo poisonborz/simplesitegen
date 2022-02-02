@@ -47,7 +47,7 @@ const clearDistFolder = (product) => {
                 }
             }
         })
-    });
+    })
 
 }
 
