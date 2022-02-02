@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>{{ title }}</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="scripts/cookieHandler.js"></script>
+    <script type="text/javascript" src="scripts/maphighlight.js"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+</head>
+
+<body>
+
+    <nav class="wfheader">
+        <div class="wfheader__wrap">
+            <p>Simplesitegen asset manager demo</p>
+
+            {{#if p_list}}
+                <a class="activated" href="assets.html">Back to demo</a>
+            {{else}}
+                <a href="_list.html">List of pages</a>
+            {{/if}}
+            <a id="toggleHighlighting" onclick="switchHighlighting(getCookie('wfhighlight') !== 'true', this)">Highlight clickable items</a>
+            <a id="toggleNotes" onclick="switchNotes(getCookie('wfnotes') !== 'true',this)">Toggle notes</a>
+        </div>
+    </nav>
+
+    <div class="main">

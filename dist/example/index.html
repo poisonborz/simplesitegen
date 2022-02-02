@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>example</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="scripts/cookieHandler.js"></script>
+    <script type="text/javascript" src="scripts/maphighlight.js"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+</head>
+
+<body>
+
+    <nav class="wfheader">
+        <div class="wfheader__wrap">
+            <p>Simplesitegen asset manager demo</p>
+
+                <a href="_list.html">List of pages</a>
+            <a id="toggleHighlighting" onclick="switchHighlighting(getCookie('wfhighlight') !== 'true', this)">Highlight clickable items</a>
+            <a id="toggleNotes" onclick="switchNotes(getCookie('wfnotes') !== 'true',this)">Toggle notes</a>
+        </div>
+    </nav>
+
+    <div class="main">
+
+<div class="loginWrap">
+    <img src="images/login_top.jpg" alt="demo" usemap="#Map3" border="0">
+    <map name="Map3" id="Map3">
+        <area shape="rect" coords="695,590,1006,626" href="assets.html" />
+    </map>
+    <img id="loginNorm" src="images/login_bottom.jpg" alt="demo" usemap="#Map" border="0">
+    <map name="Map" id="Map">
+        <area onclick="swap('#loginNorm','#loginExp')" shape="rect" coords="722,-3,975,43" href="javascript:" />
+    </map>
+
+    <img id="loginExp" src="images/login_bottom_expanded.jpg" usemap="#Map" style="display: none"alt="demo">
+    <img src="images/footer.jpg" style="margin-left:200px" alt="demo">
+
+</div>
+
+<p class="wfnote" style="top: 400px; left: 1162px;">
+    Per-client branding
+    with custom backgrounds?
+</p>
+
+<p class="wfnote" style="top: 950px; left: 1314px;">
+    on the login page footer alway below fold / 100% height
+</p>
+
+<style>
+    .loginWrap {
+        width: 1700px;
+        display: block;
+        position: relative;
+        left: 50%;
+        margin: 0 auto;
+        text-align: center;
+        margin-left: -850px;
+        background: #fff;
+    }
+</style>
+    </div>
+
+</body>
+</html>

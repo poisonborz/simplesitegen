@@ -1,0 +1,49 @@
+
+<div class="header">
+    <img src="images/header.jpg" alt="demo" usemap="#ftttff" class="header_bck" border="0">
+    <map name="ftttff" id="ftttff">
+        <area shape="rect" coords="1267,27,1293,49" href="index.html" />
+        <area shape="rect" coords="1196,28,1265,49" href="settings.html" />
+      <area shape="rect" coords="1124,27,1193,48" href="support.html" />
+    </map>
+    <div class="header_menu">
+        <a id="menu1" style="width:90px" class="{{#if p_assets}} clicked {{/if}}"  href="assets.html"></a>
+        <a id="menu2" style="width:106px" class="{{#if p_users}} clicked {{/if}}" href="users.html"></a>
+        <a id="menu4" style="width:100px" class="{{#if p_groups}} clicked {{/if}}" href="groups.html"></a>
+        <img src="images/header_menu.png" alt="demo">
+    </div>
+
+</div>
+
+<style>
+    .header {
+        position: relative;
+    }
+    .header_bck {
+        display: block;
+    }
+
+    .header_menu {
+        position: absolute;
+        top: 24px;
+        left: 318px;
+    }
+
+    .header_menu img {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+    .header_menu a {
+        display: inline-block;
+        vertical-align: top;
+        height: 29px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .header_menu a.clicked {
+        opacity: .8;
+        background: #f4f4f4f4;
+    }
+</style>

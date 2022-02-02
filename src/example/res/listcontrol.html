@@ -1,0 +1,94 @@
+
+<div class="listcontrol">
+
+    {{#if p_assets}}
+        <img class="listcomm" src="images/list_select_tracked.jpg" alt="" usemap="#Maph464e5" border="0">
+
+    {{/if}}
+
+    {{#if p_commodity}}
+        <img class="listcomm" src="images/list_select_commodity.jpg" usemap="#Maph464e5" alt="">
+    {{/if}}
+
+    <map name="Maph464e5" id="Maph464e5">
+        <area shape="rect" coords="130,0,253,30" href="assets_commodity.html"/>
+        <area shape="rect" coords="2,3,119,28" href="assets.html" />
+    </map>
+
+    {{#if m_single}}
+        <img id="listcount_single" class="listcount" src="images/list_resultcount_single.svg" alt="demo">
+        <img src="images/list_select_single.jpg" alt="demo" usemap="#listswitch_map" class="listswitch" id="listswitch_single" border="0">
+    {{/if}}
+
+    {{#if m_multi}}
+        <img id="listcount_multi" class="listcount" src="images/list_resultcount_multi.svg" alt="demo">
+        <img id="listswitch_multi" class="listswitch" usemap="#listswitch_map" src="images/list_select_multi.jpg" alt="demo">
+    {{/if}}
+
+    {{#if m_all}}
+        <img id="listcount_all" class="listcount" src="images/list_resultcount_all.svg" alt="demo">
+        <img id="listswitch_all" class="listswitch" usemap="#listswitch_map" src="images/list_select_all.jpg" alt="demo">
+    {{/if}}
+
+
+    <map name="listswitch_map" id="listswitch_map">
+        {{#if p_events}}
+            <area shape="rect" coords="4,4,89,31" href="events_rules.html" />
+            <area shape="rect" coords="93,4,176,30" href="events_rules_multi.html" />
+            <area shape="rect" coords="177,5,246,30" href="events_rules_all.html" />
+        {{/if}}
+        {{#if p_users}}
+            <area shape="rect" coords="4,4,89,31" href="users.html" />
+            <area shape="rect" coords="93,4,176,30" href="users_multi.html" />
+            <area shape="rect" coords="177,5,246,30" href="users_all.html" />
+        {{/if}}
+        {{#if p_groups}}
+            <area shape="rect" coords="4,4,89,31" href="groups.html" />
+            <area shape="rect" coords="93,4,176,30" href="groups_multi.html" />
+            <area shape="rect" coords="177,5,246,30" href="groups_all.html" />
+        {{/if}}
+        {{#if p_assets}}
+            <area shape="rect" coords="4,4,89,31" href="assets.html" />
+            <area shape="rect" coords="93,4,176,30" href="assets_multi.html" />
+            <area shape="rect" coords="177,5,246,30" href="assets_all.html" />
+        {{/if}}
+
+    </map>
+
+    <img class="listsearch" src="images/list_search.jpg" alt="demo">
+</div>
+
+<style>
+
+    .listcontrol {
+        position: relative;
+        width:1200px;
+        height: 32px;
+        margin: 0 auto 15px;
+    }
+
+    .listcount {
+        position: absolute;
+        top:7px;
+        left:10px;
+    }
+
+    .listcomm {
+        position: absolute;
+        top:0;
+        right:547px;
+    }
+
+    .listswitch {
+        position: absolute;
+        top:0;
+        right:287px;
+    }
+
+    .listsearch {
+        position: absolute;
+        top:0;
+        right:0;
+    }
+
+</style>

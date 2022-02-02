@@ -1,0 +1,343 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>example</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="scripts/cookieHandler.js"></script>
+    <script type="text/javascript" src="scripts/maphighlight.js"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+</head>
+
+<body>
+
+    <nav class="wfheader">
+        <div class="wfheader__wrap">
+            <p>Simplesitegen asset manager demo</p>
+
+                <a href="_list.html">List of pages</a>
+            <a id="toggleHighlighting" onclick="switchHighlighting(getCookie('wfhighlight') !== 'true', this)">Highlight clickable items</a>
+            <a id="toggleNotes" onclick="switchNotes(getCookie('wfnotes') !== 'true',this)">Toggle notes</a>
+        </div>
+    </nav>
+
+    <div class="main">
+
+<div class="header">
+    <img src="images/header.jpg" alt="demo" usemap="#ftttff" class="header_bck" border="0">
+    <map name="ftttff" id="ftttff">
+        <area shape="rect" coords="1267,27,1293,49" href="index.html" />
+        <area shape="rect" coords="1196,28,1265,49" href="settings.html" />
+      <area shape="rect" coords="1124,27,1193,48" href="support.html" />
+    </map>
+    <div class="header_menu">
+        <a id="menu1" style="width:90px" class=""  href="assets.html"></a>
+        <a id="menu2" style="width:106px" class="" href="users.html"></a>
+        <a id="menu4" style="width:100px" class=" clicked " href="groups.html"></a>
+        <img src="images/header_menu.png" alt="demo">
+    </div>
+
+</div>
+
+<style>
+    .header {
+        position: relative;
+    }
+    .header_bck {
+        display: block;
+    }
+
+    .header_menu {
+        position: absolute;
+        top: 24px;
+        left: 318px;
+    }
+
+    .header_menu img {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+    .header_menu a {
+        display: inline-block;
+        vertical-align: top;
+        height: 29px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .header_menu a.clicked {
+        opacity: .8;
+        background: #f4f4f4f4;
+    }
+</style>
+
+
+<div class="groups">
+
+    <img src="images/groups_structure.jpg" alt="demo" style="margin: 40px auto">
+
+    <p class="wfnote" style="top: 199px; left: 1241px;">
+        Can only be seen by management accounts, used to set up the group (organization) hierarchy.
+    </p>
+
+    <img id="gov" class="gtabs" src="images/groups_tab_overview.jpg" alt="demo" usemap="#Map45eghzu" border="0">
+        <map name="Map45eghzu" id="Map45eghzu">
+            <area onclick="showUnique('.gtabs','#gman'); showUnique('.gtabc','#gmanage')" shape="rect" coords="436,3,641,47" href="javascript:" />
+            <area onclick="showUnique('.gtabs','#gres'); showUnique('.gtabc','#greserv')" shape="rect" coords="218,3,423,47" href="javascript:" />
+            <area onclick="showUnique('.gtabs','#gov'); showUnique('.gtabc','#goverv')" shape="rect" coords="6,3,211,47" href="javascript:" />
+
+            <area onclick="toggle('.gtabscontent');" shape="rect" coords="1157,7,1198,39" href="javascript:" />
+        </map>
+    <img id="gres" class="gtabs" style="display:none;" usemap="#Map45eghzu" src="images/groups_tab_reservations.jpg" alt="demo">
+    <img id="gman" class="gtabs" style="display:none;" usemap="#Map45eghzu" src="images/groups_tab_manage.jpg" alt="demo">
+
+    <div class="gtabscontent">
+        <div id="goverv" class="gtabc">
+            <img src="images/groups_overview.jpg" usemap="#Mapfwe4rgw34"  alt="">
+        </div>
+
+        <div id="greserv" class="gtabc" style="display: none">
+            <img id="tcrescal" src="images/groups_reservation_cal.jpg" usemap="#Mapfwe4rgw34"  alt="">
+            <img id="tcreslist" src="images/groups_reservation_list.jpg" style="display: none" alt="" usemap="#Mapfwe4rgw34" border="0">
+            <map name="Mapfwe4rgw34" id="Mapfwe4rgw34">
+                <area onclick="show('#tcreslist'); hide('#tcrescal')" shape="rect" coords="857,16,948,52" href="javascript:" />
+                <area onclick="show('#tcrescal'); hide('#tcreslist')" shape="rect" coords="728,16,842,53" href="javascript:" />
+            </map>
+        </div>
+
+        <div id="gmanage" class="gtabc" style="display: none">
+
+            <img src="images/groups_manage_single.jpg" alt="demo" usemap="#gedmap" style="margin-top: 20px" class="gedit" id="usingle" border="0">
+
+
+            <img id="gaddnew" src="images/groups_manage_addnew.jpg" style="display: none; margin-top: 20px" usemap="#gedmap"  alt="demo">
+
+
+            <map name="gedmap" id="gedmap">
+                <area onclick="hide('.gedit,.list,.listcontrol,.listhead'); show('#gaddnew,.addnewtext')" shape="rect" coords="1039,0,1204,33" href="javascript:" />
+                <area onclick="show('.gedit,.list,.listcontrol,.listhead'); hide('#gaddnew,.addnewtext')" shape="rect" coords="806,111,1192,145" href="javascript:" />
+            </map>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<style>
+
+    .groups {
+        width: 1200px;
+        margin: 20px auto;
+    }
+
+    .listwrap {
+        height: 160px !important;
+        overflow: hidden;
+    }
+</style>
+<div class="listhead">
+    <map name="ge3rghbree" id="ge3rghbree">
+        <area onclick="hide('.tagbar')" shape="rect" coords="1155,7,1194,37" href="javascript:" />
+    </map>
+
+        <img class="tagbar" src="images/viewbar_tags_groups.jpg" usemap="#ge3rghbree" style="display: none; margin-bottom:15px" alt="demo">
+
+
+    <div style="position: relative">
+        <img src="images/viewbar.jpg" alt="demo" usemap="#aaads" border="0">
+        <map name="aaads" id="aaads">
+            <area onclick="toggle('#rulesgroups')" shape="rect" coords="221,6,343,39" href="javascript:">
+            <area onclick="toggle('#vbardropd')" shape="rect" coords="1158,6,1195,39" href="javascript:">
+        </map>
+
+
+        <a class="filtertype" onclick="swap('.listfbutton','.filteron, .listfilter')" href="javascript:">
+            <img class="listfbutton" src="images/viewbar_filter.jpg" alt="demo">
+
+            <img class="filteron" style="display: none" src="images/groups_filter_on.jpg"
+                 alt="demo">
+        </a>
+    </div>
+
+
+
+        <img class="listfilter" style="display: none" src="images/groups_filters.jpg" alt="demo">
+
+        <img id="rulesgroups" src="images/groups_open_single.jpg" style="display: none" alt="demo" usemap="#rulesgroupsMap" border="0">
+    <map name="rulesgroupsMap" id="rulesgroupsMap">
+        <area onclick="hide('#rulesgroups')" shape="rect" coords="1014,399,1186,427" href="javascript:"/>
+    </map>
+
+
+    <img id="vbardropd" class="vdropdown" style="display: none" src="images/viewbar_dropdown.png" alt="demo" usemap="#viewbardropd" border="0">
+
+    <img src="images/viewbar_saveview.png" alt="demo" usemap="#vbarsaveMap" style="display:none;  position: absolute; top:-60px; left:270px;" id="vbarsave" border="0">
+    <map name="vbarsaveMap" id="vbarsaveMap">
+        <area onclick="hide('#vbarsave')" shape="rect" coords="620,13,685,58" href="javascript:"/>
+        <area onclick="hide('#vbarsave')" shape="rect" coords="351,143,512,184" href="javascript:"/>
+      <area onclick="show('.tagbar'); hide('#vbarsave')" shape="rect" coords="513,142,674,183" href="javascript:"/>
+    </map>
+
+    <map name="viewbardropd" id="viewbardropd">
+        <area onclick="toggle('.tagbar'); hide('#vbardropd')" shape="rect" coords="5,34,154,64" href="javascript:"/>
+        <area onclick="show('#vbarsave'); hide('#vbardropd')" shape="rect" coords="5,4,154,34" href="javascript:"/>
+    </map>
+
+
+</div>
+
+
+<style>
+    .listhead {
+        width: 1200px;
+        position: relative;
+        text-align: center;
+        z-index: 100;
+        margin: 20px auto 15px;
+    }
+
+    .vdropdown {
+        position: absolute;
+        top:47px;
+        right: 0;
+        z-index: 100;
+        display: none;
+    }
+
+    .filtertype {
+        position: absolute;
+        bottom: 0;
+        right: 53px;
+        z-index: 100;
+    }
+
+</style>
+
+<div class="listcontrol">
+
+
+
+    <map name="Maph464e5" id="Maph464e5">
+        <area shape="rect" coords="130,0,253,30" href="assets_commodity.html"/>
+        <area shape="rect" coords="2,3,119,28" href="assets.html" />
+    </map>
+
+        <img id="listcount_single" class="listcount" src="images/list_resultcount_single.svg" alt="demo">
+        <img src="images/list_select_single.jpg" alt="demo" usemap="#listswitch_map" class="listswitch" id="listswitch_single" border="0">
+
+
+
+
+    <map name="listswitch_map" id="listswitch_map">
+            <area shape="rect" coords="4,4,89,31" href="groups.html" />
+            <area shape="rect" coords="93,4,176,30" href="groups_multi.html" />
+            <area shape="rect" coords="177,5,246,30" href="groups_all.html" />
+
+    </map>
+
+    <img class="listsearch" src="images/list_search.jpg" alt="demo">
+</div>
+
+<style>
+
+    .listcontrol {
+        position: relative;
+        width:1200px;
+        height: 32px;
+        margin: 0 auto 15px;
+    }
+
+    .listcount {
+        position: absolute;
+        top:7px;
+        left:10px;
+    }
+
+    .listcomm {
+        position: absolute;
+        top:0;
+        right:547px;
+    }
+
+    .listswitch {
+        position: absolute;
+        top:0;
+        right:287px;
+    }
+
+    .listsearch {
+        position: absolute;
+        top:0;
+        right:0;
+    }
+
+</style>
+
+
+
+
+
+    <img class="addnewtext" style="display: none" src="images/groups_addnewtext.svg" alt="demo">
+
+
+<div class="listwrap">
+    <div class="list">
+
+
+
+
+            <img class="lcont" src="images/list_groups.svg" alt="demo">
+
+
+        <img id="list_types" class="lcont" src="images/list_types.svg" style="display: none" alt="demo">
+        <img id="list_categories" class="lcont" src="images/list_categories.svg" style="display: none" alt="demo">
+
+
+        <img class="listback" src="images/list_single.jpg" alt="demo">
+    </div>
+</div>
+
+
+
+<style>
+
+    img.addnewtext {
+        margin: 70px auto;
+    }
+
+    .list {
+        position: relative;
+        width:1200px;
+        margin: 0 auto;
+    }
+
+    .lcont {
+        position: relative;
+        z-index: 20;
+        top:0;
+        left:20px;
+    }
+
+    .listback {
+        position: absolute;
+        z-index: 10;
+        top:0;
+        left:-44px;
+    }
+
+</style>
+
+<img src="images/footer.jpg" style="margin: 40px auto 0" alt="demo">
+    </div>
+
+</body>
+</html>

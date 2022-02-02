@@ -1,0 +1,209 @@
+<div class="tabcontents">
+
+
+    <map name="tc_detailsMap" id="tc_detailsMap">
+        <area onclick="hide('#tc_details'); show('#mapfull')" shape="rect" coords="677,3,700,318" href="javascript:" />
+    </map>
+
+    {{#if p_commodity}}
+        <img src="images/machine_commodity.jpg" class="tabcontent" alt="demo" usemap="#tc_detailsMap"  id="tc_details"  style="display:block;" border="0">
+    {{/if}}
+
+    {{#if m_single}}
+        <img src="images/machine_details_single.jpg" class="tabcontent" alt="demo" usemap="#tc_detailsMap"  id="tc_details"  style="display:block;" border="0">
+    {{/if}}
+
+    {{#if m_multi}}
+        <img id="tc_details" class="tabcontent" style="display:block" usemap="#tc_detailsMap"
+         src="images/machine_details_multi.jpg" alt="demo">
+    {{/if}}
+
+    <img id="mapfull" src="images/machine_details_map.jpg" alt="demo" usemap="#Mapmmmm" class="tabcontent" border="0">
+    <map name="Mapmmmm" id="Mapmmmm">
+        <area onclick="hide('#mapfull'); show('#tc_details')" shape="rect" coords="0,-1,25,319" href="javascript:"/>
+    </map>
+
+
+    <div id="tc_overview" class="tabcontent">
+        <map name="Mzh645ap" id="Mzh645ap">
+            <area onclick="hide('#tcgraph'); show('#tclist')"  shape="rect" coords="109,7,205,42" href="javascript:" />
+            <area onclick="show('#tcgraph'); hide('#tclist')"shape="rect" coords="10,7,106,42" href="javascript:" />
+        </map>
+        <map name="Mapgwer2" id="Mapgwer2">
+            <area onclick="toggle('#weekfilter')" shape="rect" coords="651,14,805,48" href="javascript:" />
+        </map>
+
+        <p class="wfnote" style="top: 251px; left: 1284px;">
+            In case of a lot of toggles this breaks down to multiple rows. Each item toggleable.
+        </p>
+
+        <p class="wfnote" style="top: 402px; left: 1289px;">
+            Each timespan only available at selected
+            intervals. Eg less than 1 week -> Hours is selectable
+        </p>
+
+        <div id="tcgraph">
+            <img src="images/machines_overview_tabs_graph.jpg" alt="demo" usemap="#Mzh645ap" border="0">
+
+            <img src="images/machines_overview_events1.jpg" alt="demo">
+            <img src="images/machines_overview_data.jpg" alt="demo">
+            <img src="images/machines_overview_timecontrol.jpg" alt="demo" usemap="#Mapgwer2" border="0">
+
+            <img src="images/machines_overview_graph.jpg" alt="demo">
+
+            <a onclick="hide('#weekfilter')" href="javascript:">
+                <img id="weekfilter" src="images/machines_overview_graphdropdown.png" style="position: absolute; z-index: 100; display: none; top:195px; left: 653px" alt="demo">
+            </a>
+        </div>
+    
+        <div id="tclist" style="position: relative; display: none">
+            <img src="images/machines_overview_tabs_list.jpg" usemap="#Mzh645ap" alt="demo">
+            <img src="images/machines_overview_events2.jpg" alt="demo">
+            <img src="images/machines_overview_timecontrol.jpg" usemap="#Mapgwer2" border="0">
+            <img src="images/machines_overview_list.jpg" alt="demo" usemap="#hb46zh" border="0">
+            <map name="hb46zh" id="hb46zh">
+              <area onclick="show('#emodal')" shape="rect" coords="155,10,672,263" href="javascript:" />
+            </map>
+
+            <a onclick="hide('#weekfilter')" href="javascript:">
+                <img id="weekfilter" src="images/machines_overview_graphdropdown.png" style="position: absolute; z-index: 100; display: none; top:149px; left: 653px" alt="demo">
+            </a>
+
+            <img id="emodal" src="images/machines_overview_listmodal.png" alt="demo" usemap="#Maaafsdfp" style="position: absolute; display: none; top:175px; left:32px;" border="0">
+            <map name="Maaafsdfp" id="Maaafsdfp">
+              <area onclick="hide('#emodal')" shape="rect" coords="1088,14,1132,53" href="javascript:" />
+            </map>
+
+        </div>
+
+    </div>
+
+
+    <div id="tc_reservation" class="tabcontent">
+
+        <img id="tcrescal" src="images/machines_reservation_cal.jpg" usemap="#Mapfwe4rgw34"  alt="">
+        <img id="tcreslist" src="images/machines_reservation_list.jpg" style="display: none" alt="" usemap="#Mapfwe4rgw34" border="0">
+        <map name="Mapfwe4rgw34" id="Mapfwe4rgw34">
+            <area onclick="show('#tcreslist'); hide('#tcrescal')" shape="rect" coords="857,16,948,52" href="javascript:" />
+          <area onclick="show('#tcrescal'); hide('#tcreslist')" shape="rect" coords="728,16,842,53" href="javascript:" />
+        </map>
+        
+    </div>
+
+
+
+
+    <div id="tc_manage" class="tabcontent">
+        <img id="tct_a" src="images/machines_manage_tabs.jpg" class="tcmtab" alt="demo" usemap="#Mapadasf" border="0">
+        <img id="tct_c" src="images/machines_manage_tabs_categories.jpg" class="tcmtab" style="display: none" alt="demo" usemap="#Mapadasf" border="0">
+        <img id="tct_t" src="images/machines_manage_tabs_types.jpg" class="tcmtab" alt="demo" style="display: none" usemap="#Mapadasf" border="0">
+
+
+
+
+
+
+
+
+
+        <div id="tc_addnew" class="tcmcont"  style="display: none">
+            <img src="images/machines_manage_addnewbutton.png" style="position: absolute; opacity: .5; top:10px; right:12px;" alt="demo" border="0">
+            <img id="addnewa" src="images/machines_manage_addnew.jpg" alt="demo" usemap="#tttcm" border="0">
+            <img id="addnewc" src="images/machines_manage_addnew_commodity.jpg" style="display: none" alt="demo" usemap="#tttcm" border="0">
+            <img class="tcgroup" src="images/groups_open_single.jpg" alt="demo" usemap="#tcgroupMap" style="display: none"
+                 border="0">
+        </div>
+
+        <div id="tc_edit" class="tcmcont">
+            <a onclick="hide('#tc_edit, #tc_mtypes,.list,.listcontrol,.listhead'); show('#tc_addnew,.addnewtext')" href="javascript:">
+                <img src="images/machines_manage_addnewbutton.png" style="position: absolute; top:10px; right:12px;" alt="demo" border="0">
+            </a>
+            {{#if m_single}}
+            <img src="images/machines_manage_single.jpg" alt="demo" usemap="#tcm"  border="0">
+            {{/if}}
+            {{#if m_multi}}
+            <img src="images/machines_manage_multi.jpg" usemap="#tcm" alt="demo">
+            {{/if}}
+            <img class="tcgroup" src="images/groups_open_single.jpg" alt="demo" usemap="#tcgroupMap" style="display: none"
+                 border="0">
+        </div>
+
+        <div id="tc_catedit" class="tcmcont" style="display: none">
+            <a onclick="hide('#tc_catedit, .list,.listcontrol,.listhead'); show('#tc_catnew')" href="javascript:">
+                <img src="images/machines_manage_category_addnew.jpg" style="position: absolute; top:10px; right:12px;" alt="demo" border="0">
+            </a>
+            <img src="images/machines_manage_category.jpg" alt="demo" style="margin-bottom: 20px" usemap="#tcm"  border="0">
+        </div>
+
+        <div id="tc_typeedit" class="tcmcont" style="display: none">
+
+            <p class="wfnote" style="top: 250px; left: 1239px;">
+                the category dropdown filters the types below, and the add new type screen adds types to this category.
+            </p>
+
+            <img src="images/machines_manage_typesdropd.jpg" style="position: absolute; top:10px; right:177px" alt="demo" border="0">
+            <a onclick="hide('#tc_typeedit'); show('#tc_typenew')" href="javascript:">
+                <img src="images/machines_manage_type_addnew.jpg" style="position: absolute; top:10px; right:12px;" alt="demo" border="0">
+            </a>
+            <img src="images/machines_manage_type.jpg" alt="demo" style="margin-bottom: 20px" usemap="#tcm"  border="0">
+        </div>
+
+        <div id="tc_catnew" class="tcmcont" style="display: none">
+            <img src="images/machines_manage_category_addnew.jpg" style="position: absolute; top:10px; right:12px; opacity: .5" alt="demo" border="0">
+            <img src="images/machines_manage_addnew_category.jpg" style="margin-bottom: 20px" alt="demo"  border="0">
+        </div>
+
+        <div id="tc_typenew" class="tcmcont" style="display: none">
+            <img src="images/machines_manage_type_addnew.jpg" style="position: absolute; top:10px; right:12px; opacity: .5" alt="demo" border="0">
+            <img src="images/machines_manage_typesdropd.jpg" style="position: absolute; top:10px; right:177px;" alt="demo" border="0">
+            <img src="images/machines_manage_addnew_type.jpg" style="margin-bottom: 20px" alt="demo"  border="0">
+        </div>
+
+
+
+
+        <map name="tcgroupMap" id="tcgroupMap">
+            <area onclick="toggle('.tcgroup')" shape="rect" coords="1016,399,1184,428" href="javascript:"/>
+        </map>
+
+        <map name="tttcm" id="tttcm">
+        <area shape="rect"  onclick="show('#addnewc'); hide('#addnewa')"coords="95,7,184,35" href="javascript:"/>
+        <area shape="rect"  onclick="show('#addnewa'); hide('#addnewc')" coords="22,7,93,36" href="javascript:"/>
+            <area onclick="show('#tc_edit,.list,.listcontrol,.listhead'); hide('#tc_addnew,.addnewtext')" shape="rect"
+                  coords="915,97,1185,129" href="javascript:"/>
+            <area shape="rect"  onclick="toggle('.tcgroup')" coords="31,96,412,134" href="javascript:"/>
+        </map>
+
+        <map name="tcm" id="tcm">
+            <area onclick="show('#tc_edit,.list,.listcontrol,.listhead'); hide('#tc_addnew')" shape="rect"
+                  coords="1058,109,1185,146" href="javascript:"/>
+            <area shape="rect"  onclick="toggle('.tcgroup')" coords="22,58,386,92" href="javascript:"/>
+            <area onclick="hide('#tc_addnew,.addnewtext'); show('#tc_edit.list,.listcontrol,.listhead,.addnewtext')" shape="rect" coords="890,55,1193,90" href="javascript:"/>
+        </map>
+
+
+        <map name="Mapadasf" id="Mapadasf">
+            <area  onclick="showUnique('.tcmcont','#tc_edit'); showUnique('.lcont','#list_machines'); showUnique('.tcmtab','#tct_a'); show('#tc_edit,.list,.listcontrol,.listhead'); hide('.addnewtext')"  shape="rect" coords="4,5,156,44" href="javascript:" />
+            <area onclick="showUnique('.tcmcont','#tc_catedit'); showUnique('.lcont','#list_categories');showUnique('.tcmtab','#tct_c'); show('.list,.listcontrol');  hide('.listhead, .addnewtext')"  shape="rect" coords="159,3,332,44" href="javascript:" />
+            <area onclick="showUnique('.tcmcont','#tc_typeedit'); showUnique('.lcont','#list_types');showUnique('.tcmtab','#tct_t'); show('.list,.listcontrol');  hide('.listhead, .addnewtext');"  shape="rect" coords="338,4,496,46" href="javascript:" />
+
+        </map>
+
+
+    </div>
+
+
+
+
+
+
+</div>
+
+<style>
+    .tabcontent, img.tabcontent {
+        position: relative;
+        width: 1200px;
+        margin: 0 auto;
+        display: none;
+    }
+</style>

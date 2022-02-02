@@ -1,0 +1,46 @@
+
+<div class="tabs">
+
+    {{#if p_commodity}}
+        <p class="wfnote" style="top: 264px; left: 1060px; ">
+            Commodity items only have a description, they can be assigned to groups and can be reserved.
+        </p>
+
+        <p class="wfnote" style="top: 368px; left: 1061px;">
+           In the list below, commodity items and tracked items can both be selected, in this case the details only "mixed selection" is visible.
+        </p>
+        <img class="mtab" src="images/machine_tabs_commodity.jpg" alt="demo" border="0">
+    {{else}}
+
+        <img id="tabd" class="mtab" src="images/machine_tabs_details.jpg" alt="demo" usemap="#Maptttt" border="0">
+        <img id="tabr" class="mtab" src="images/machine_tabs_reservation.jpg" style="display: none" usemap="#Maptttt" alt="demo">
+        <img id="tabo" class="mtab" src="images/machine_tabs_overview.jpg" style="display: none" usemap="#Maptttt" alt="demo">
+        <img id="tabm" class="mtab" src="images/machine_tabs_manage.jpg" style="display: none" usemap="#Maptttt" alt="demo">
+
+    {{/if}}
+
+    <map name="Maptttt" id="Maptttt">
+        <area onclick="toggle('.tabcontents')" shape="rect" coords="1160,7,1194,38" href="javascript:" />
+        <area onclick="showUnique('.mtab','#tabr'); showUnique('.tabcontent','#tc_reservation'); showUnique('.lcont','#list_machines'); showUnique('.tcmtab','#tct_a'); show('#tc_edit,.list,.listcontrol,.listhead'); hide('.addnewtext')" shape="rect" coords="432,3,644,48" href="javascript:" />
+        <area onclick="showUnique('.mtab','#tabd'); showUnique('.tabcontent','#tc_details'); showUnique('.lcont','#list_machines'); showUnique('.tcmtab','#tct_a'); show('#tc_edit,.list,.listcontrol,.listhead'); hide('.addnewtext')" shape="rect" coords="3,3,211,48" href="javascript:" />
+        <area onclick="showUnique('.mtab','#tabo'); showUnique('.tabcontent','#tc_overview'); showUnique('.lcont','#list_machines'); showUnique('.tcmtab','#tct_a'); show('#tc_edit,.list,.listcontrol,.listhead'); hide('.addnewtext')" shape="rect" coords="218,3,427,48" href="javascript:" />
+        <area onclick="showUnique('.mtab','#tabm'); showUnique('.tabcontent','#tc_manage'); showUnique('.lcont','#list_machines'); showUnique('.tcmtab','#tct_a'); show('#tc_edit,.list,.listcontrol,.listhead'); hide('.addnewtext, #tc_addnew')" shape="rect" coords="647,3,859,48" href="javascript:" />
+    </map>
+</div>
+
+<p class="wfnote" style="top: 129px; left: 1288px;">
+    narrow version of this tab sticks on scrolling, <br>can be expanded
+</p>
+
+
+
+<div class="wfnote" style="top: 574px; left: 1271px;">
+    this row sticks on scrolling
+</div>
+
+<style>
+    .tabs {
+        width: 1200px;
+        margin: 15px auto 0;
+    }
+</style>

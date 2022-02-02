@@ -1,0 +1,78 @@
+
+
+<div class="groups">
+
+    <img src="images/groups_structure.jpg" alt="demo" style="margin: 40px auto">
+
+    <p class="wfnote" style="top: 199px; left: 1241px;">
+        Can only be seen by management accounts, used to set up the group (organization) hierarchy.
+    </p>
+
+    <img id="gov" class="gtabs" src="images/groups_tab_overview.jpg" alt="demo" usemap="#Map45eghzu" border="0">
+        <map name="Map45eghzu" id="Map45eghzu">
+            <area onclick="showUnique('.gtabs','#gman'); showUnique('.gtabc','#gmanage')" shape="rect" coords="436,3,641,47" href="javascript:" />
+            <area onclick="showUnique('.gtabs','#gres'); showUnique('.gtabc','#greserv')" shape="rect" coords="218,3,423,47" href="javascript:" />
+            <area onclick="showUnique('.gtabs','#gov'); showUnique('.gtabc','#goverv')" shape="rect" coords="6,3,211,47" href="javascript:" />
+
+            <area onclick="toggle('.gtabscontent');" shape="rect" coords="1157,7,1198,39" href="javascript:" />
+        </map>
+    <img id="gres" class="gtabs" style="display:none;" usemap="#Map45eghzu" src="images/groups_tab_reservations.jpg" alt="demo">
+    <img id="gman" class="gtabs" style="display:none;" usemap="#Map45eghzu" src="images/groups_tab_manage.jpg" alt="demo">
+
+    <div class="gtabscontent">
+        <div id="goverv" class="gtabc">
+            <img src="images/groups_overview.jpg" usemap="#Mapfwe4rgw34"  alt="">
+        </div>
+
+        <div id="greserv" class="gtabc" style="display: none">
+            <img id="tcrescal" src="images/groups_reservation_cal.jpg" usemap="#Mapfwe4rgw34"  alt="">
+            <img id="tcreslist" src="images/groups_reservation_list.jpg" style="display: none" alt="" usemap="#Mapfwe4rgw34" border="0">
+            <map name="Mapfwe4rgw34" id="Mapfwe4rgw34">
+                <area onclick="show('#tcreslist'); hide('#tcrescal')" shape="rect" coords="857,16,948,52" href="javascript:" />
+                <area onclick="show('#tcrescal'); hide('#tcreslist')" shape="rect" coords="728,16,842,53" href="javascript:" />
+            </map>
+        </div>
+
+        <div id="gmanage" class="gtabc" style="display: none">
+
+            {{#if m_single}}
+            <img src="images/groups_manage_single.jpg" alt="demo" usemap="#gedmap" style="margin-top: 20px" class="gedit" id="usingle" border="0">
+
+            {{/if}}
+            {{#if m_multi}}
+            <img id="umulti" class="gedit" src="images/groups_manage_multi.jpg" style="margin-top: 20px" usemap="#gedmap"  alt="demo">
+            {{/if}}
+
+            <img id="gaddnew" src="images/groups_manage_addnew.jpg" style="display: none; margin-top: 20px" usemap="#gedmap"  alt="demo">
+
+
+            <map name="gedmap" id="gedmap">
+                <area onclick="hide('.gedit,.list,.listcontrol,.listhead'); show('#gaddnew,.addnewtext')" shape="rect" coords="1039,0,1204,33" href="javascript:" />
+                <area onclick="show('.gedit,.list,.listcontrol,.listhead'); hide('#gaddnew,.addnewtext')" shape="rect" coords="806,111,1192,145" href="javascript:" />
+            </map>
+        </div>
+    </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<style>
+
+    .groups {
+        width: 1200px;
+        margin: 20px auto;
+    }
+
+    .listwrap {
+        height: 160px !important;
+        overflow: hidden;
+    }
+</style>

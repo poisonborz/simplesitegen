@@ -1,0 +1,90 @@
+
+
+
+
+
+{{#if p_users}}
+    <img class="addnewtext" style="display: none" src="images/users_addnewtext.svg" alt="demo">
+{{/if}}
+{{#if p_groups}}
+    <img class="addnewtext" style="display: none" src="images/groups_addnewtext.svg" alt="demo">
+{{/if}}
+{{#if p_assets}}
+    <img class="addnewtext" style="display: none" src="images/machines_addnewtext.svg" alt="demo">
+{{/if}}
+{{#if p_events}}
+    <img class="addnewtext" style="display: none" src="images/events_addnewtext.svg" alt="demo">
+{{/if}}
+
+
+<div class="listwrap">
+    <div class="list">
+
+        {{#if p_commodity}}
+            <img class="lcont" src="images/list_commodity.svg" alt="demo">
+        {{/if}}
+
+        {{#if p_events}}
+            <img class="lcont" src="images/list_events.svg" alt="demo">
+        {{/if}}
+
+        {{#if p_users}}
+            <img class="lcont" src="images/list_users.svg" alt="demo">
+        {{/if}}
+
+        {{#if p_groups}}
+            <img class="lcont" src="images/list_groups.svg" alt="demo">
+        {{/if}}
+
+        {{#if p_assets}}
+            <img id="list_machines" class="lcont" src="images/list_machines.svg" alt="demo">
+        {{/if}}
+
+        <img id="list_types" class="lcont" src="images/list_types.svg" style="display: none" alt="demo">
+        <img id="list_categories" class="lcont" src="images/list_categories.svg" style="display: none" alt="demo">
+
+
+        {{#if m_single}}
+        <img class="listback" src="images/list_single.jpg" alt="demo">
+        {{/if}}
+        {{#if m_multi}}
+        <p class="wfnote" style="top: 830px; left: 1273px;">When multiple items are selected, all enabled operations above will apply to all selected items - info display, editing, deletion.</p>
+
+        <img class="listback" src="images/list_multi.jpg" alt="demo">
+        {{/if}}
+        {{#if m_all}}
+        <p class="wfnote" style="top: 723px; left: 1272px;">All = every displayed item is considered selected (that is not hidden by search, group or filter settings)</p>
+        <img class="listback"  src="images/list_none.jpg" alt="demo">
+        {{/if}}
+    </div>
+</div>
+
+
+
+<style>
+
+    img.addnewtext {
+        margin: 70px auto;
+    }
+
+    .list {
+        position: relative;
+        width:1200px;
+        margin: 0 auto;
+    }
+
+    .lcont {
+        position: relative;
+        z-index: 20;
+        top:0;
+        left:20px;
+    }
+
+    .listback {
+        position: absolute;
+        z-index: 10;
+        top:0;
+        left:-44px;
+    }
+
+</style>

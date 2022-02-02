@@ -1,0 +1,310 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>example</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="scripts/cookieHandler.js"></script>
+    <script type="text/javascript" src="scripts/maphighlight.js"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+</head>
+
+<body>
+
+    <nav class="wfheader">
+        <div class="wfheader__wrap">
+            <p>Simplesitegen asset manager demo</p>
+
+                <a href="_list.html">List of pages</a>
+            <a id="toggleHighlighting" onclick="switchHighlighting(getCookie('wfhighlight') !== 'true', this)">Highlight clickable items</a>
+            <a id="toggleNotes" onclick="switchNotes(getCookie('wfnotes') !== 'true',this)">Toggle notes</a>
+        </div>
+    </nav>
+
+    <div class="main">
+
+<div class="header">
+    <img src="images/header.jpg" alt="demo" usemap="#ftttff" class="header_bck" border="0">
+    <map name="ftttff" id="ftttff">
+        <area shape="rect" coords="1267,27,1293,49" href="index.html" />
+        <area shape="rect" coords="1196,28,1265,49" href="settings.html" />
+      <area shape="rect" coords="1124,27,1193,48" href="support.html" />
+    </map>
+    <div class="header_menu">
+        <a id="menu1" style="width:90px" class=""  href="assets.html"></a>
+        <a id="menu2" style="width:106px" class=" clicked " href="users.html"></a>
+        <a id="menu4" style="width:100px" class="" href="groups.html"></a>
+        <img src="images/header_menu.png" alt="demo">
+    </div>
+
+</div>
+
+<style>
+    .header {
+        position: relative;
+    }
+    .header_bck {
+        display: block;
+    }
+
+    .header_menu {
+        position: absolute;
+        top: 24px;
+        left: 318px;
+    }
+
+    .header_menu img {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+    .header_menu a {
+        display: inline-block;
+        vertical-align: top;
+        height: 29px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .header_menu a.clicked {
+        opacity: .8;
+        background: #f4f4f4f4;
+    }
+</style>
+
+
+
+<div class="users">
+        <img id="umulti" class="uedit" src="images/user_manage_multi.jpg" usemap="#gwer345eh54" alt="demo">
+
+    <img id="uaddnew" src="images/user_manage_addnew.jpg" style="display: none" usemap="#gwer345eh54" alt="demo">
+
+    <img id="multgroup" class="tcgroup" src="images/groups_open_multi_restricted.jpg" alt="demo" usemap="#mmap" style="display: none"
+         border="0">
+
+    <map name="mmap" id="mmap">
+        <area onclick="toggle('#multgroup')" shape="rect" coords="1016,399,1184,428" href="javascript:"/>
+    </map>
+
+    <map name="gwer345eh54" id="gwer345eh54">
+        <area onclick="hide('#usingle, #umulti,.list,.listcontrol,.listhead'); show('#uaddnew,.addnewtext')" shape="rect" coords="1074,2,1202,31" href="javascript:" />
+        <area onclick="toggle('#multgroup')" shape="rect" coords="13,112,380,144" href="javascript:"/>
+      <area  onclick="show('.uedit,.list,.listcontrol,.listhead'); hide('#uaddnew,.addnewtext')" shape="rect" coords="913,110,1188,146" href="javascript:"/>
+    </map>
+
+</div>
+
+
+<style>
+
+    .users {
+        width: 1200px;
+        margin: 15px auto 0;
+    }
+
+    .listwrap {
+        height: 300px !important;
+        overflow: hidden;
+    }
+
+</style>
+
+<div class="listhead">
+    <map name="ge3rghbree" id="ge3rghbree">
+        <area onclick="hide('.tagbar')" shape="rect" coords="1155,7,1194,37" href="javascript:" />
+    </map>
+
+        <img class="tagbar" src="images/viewbar_tags_users.jpg" usemap="#ge3rghbree" style="display: none; margin-bottom:15px" alt="demo">
+
+
+    <div style="position: relative">
+        <img src="images/viewbar.jpg" alt="demo" usemap="#aaads" border="0">
+        <map name="aaads" id="aaads">
+            <area onclick="toggle('#rulesgroups')" shape="rect" coords="221,6,343,39" href="javascript:">
+            <area onclick="toggle('#vbardropd')" shape="rect" coords="1158,6,1195,39" href="javascript:">
+        </map>
+
+
+        <a class="filtertype" onclick="swap('.listfbutton','.filteron, .listfilter')" href="javascript:">
+            <img class="listfbutton" src="images/viewbar_filter.jpg" alt="demo">
+
+            <img class="filteron" style="display: none" src="images/users_filter_on.jpg"
+                 alt="demo">
+        </a>
+    </div>
+
+
+
+        <img class="listfilter" style="display: none" src="images/users_filter_filteropen.jpg"  alt="demo">
+
+        <img id="rulesgroups" src="images/groups_open_multi.jpg" style="display: none" alt="demo" usemap="#rulesgroupsMap" border="0">
+    <map name="rulesgroupsMap" id="rulesgroupsMap">
+        <area onclick="hide('#rulesgroups')" shape="rect" coords="1014,399,1186,427" href="javascript:"/>
+    </map>
+
+
+    <img id="vbardropd" class="vdropdown" style="display: none" src="images/viewbar_dropdown.png" alt="demo" usemap="#viewbardropd" border="0">
+
+    <img src="images/viewbar_saveview.png" alt="demo" usemap="#vbarsaveMap" style="display:none;  position: absolute; top:-60px; left:270px;" id="vbarsave" border="0">
+    <map name="vbarsaveMap" id="vbarsaveMap">
+        <area onclick="hide('#vbarsave')" shape="rect" coords="620,13,685,58" href="javascript:"/>
+        <area onclick="hide('#vbarsave')" shape="rect" coords="351,143,512,184" href="javascript:"/>
+      <area onclick="show('.tagbar'); hide('#vbarsave')" shape="rect" coords="513,142,674,183" href="javascript:"/>
+    </map>
+
+    <map name="viewbardropd" id="viewbardropd">
+        <area onclick="toggle('.tagbar'); hide('#vbardropd')" shape="rect" coords="5,34,154,64" href="javascript:"/>
+        <area onclick="show('#vbarsave'); hide('#vbardropd')" shape="rect" coords="5,4,154,34" href="javascript:"/>
+    </map>
+
+
+</div>
+
+
+<style>
+    .listhead {
+        width: 1200px;
+        position: relative;
+        text-align: center;
+        z-index: 100;
+        margin: 20px auto 15px;
+    }
+
+    .vdropdown {
+        position: absolute;
+        top:47px;
+        right: 0;
+        z-index: 100;
+        display: none;
+    }
+
+    .filtertype {
+        position: absolute;
+        bottom: 0;
+        right: 53px;
+        z-index: 100;
+    }
+
+</style>
+
+<div class="listcontrol">
+
+
+
+    <map name="Maph464e5" id="Maph464e5">
+        <area shape="rect" coords="130,0,253,30" href="assets_commodity.html"/>
+        <area shape="rect" coords="2,3,119,28" href="assets.html" />
+    </map>
+
+
+
+        <img id="listcount_all" class="listcount" src="images/list_resultcount_all.svg" alt="demo">
+        <img id="listswitch_all" class="listswitch" usemap="#listswitch_map" src="images/list_select_all.jpg" alt="demo">
+
+
+    <map name="listswitch_map" id="listswitch_map">
+            <area shape="rect" coords="4,4,89,31" href="users.html" />
+            <area shape="rect" coords="93,4,176,30" href="users_multi.html" />
+            <area shape="rect" coords="177,5,246,30" href="users_all.html" />
+
+    </map>
+
+    <img class="listsearch" src="images/list_search.jpg" alt="demo">
+</div>
+
+<style>
+
+    .listcontrol {
+        position: relative;
+        width:1200px;
+        height: 32px;
+        margin: 0 auto 15px;
+    }
+
+    .listcount {
+        position: absolute;
+        top:7px;
+        left:10px;
+    }
+
+    .listcomm {
+        position: absolute;
+        top:0;
+        right:547px;
+    }
+
+    .listswitch {
+        position: absolute;
+        top:0;
+        right:287px;
+    }
+
+    .listsearch {
+        position: absolute;
+        top:0;
+        right:0;
+    }
+
+</style>
+
+
+
+
+
+    <img class="addnewtext" style="display: none" src="images/users_addnewtext.svg" alt="demo">
+
+
+<div class="listwrap">
+    <div class="list">
+
+
+
+            <img class="lcont" src="images/list_users.svg" alt="demo">
+
+
+
+        <img id="list_types" class="lcont" src="images/list_types.svg" style="display: none" alt="demo">
+        <img id="list_categories" class="lcont" src="images/list_categories.svg" style="display: none" alt="demo">
+
+
+        <p class="wfnote" style="top: 723px; left: 1272px;">All = every displayed item is considered selected (that is not hidden by search, group or filter settings)</p>
+        <img class="listback"  src="images/list_none.jpg" alt="demo">
+    </div>
+</div>
+
+
+
+<style>
+
+    img.addnewtext {
+        margin: 70px auto;
+    }
+
+    .list {
+        position: relative;
+        width:1200px;
+        margin: 0 auto;
+    }
+
+    .lcont {
+        position: relative;
+        z-index: 20;
+        top:0;
+        left:20px;
+    }
+
+    .listback {
+        position: absolute;
+        z-index: 10;
+        top:0;
+        left:-44px;
+    }
+
+</style>
+
+
+<img src="images/footer.jpg" style="margin: 40px auto 0" alt="demo">
+    </div>
+
+</body>
+</html>

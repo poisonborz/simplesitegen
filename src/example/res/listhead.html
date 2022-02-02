@@ -1,0 +1,118 @@
+<div class="listhead">
+    <map name="ge3rghbree" id="ge3rghbree">
+        <area onclick="hide('.tagbar')" shape="rect" coords="1155,7,1194,37" href="javascript:" />
+    </map>
+
+    {{#if p_assets}}
+        <img class="tagbar" src="images/viewbar_tags_machines.jpg" alt="demo" usemap="#ge3rghbree" style="display:none; margin-bottom:15px" border="0">
+
+    {{/if}}
+    {{#if p_users}}
+        <img class="tagbar" src="images/viewbar_tags_users.jpg" usemap="#ge3rghbree" style="display: none; margin-bottom:15px" alt="demo">
+    {{/if}}
+    {{#if p_events}}
+        <img class="tagbar" src="images/viewbar_tags_events.jpg" usemap="#ge3rghbree" style="display: none; margin-bottom:15px" alt="demo">
+    {{/if}}
+    {{#if p_groups}}
+        <img class="tagbar" src="images/viewbar_tags_groups.jpg" usemap="#ge3rghbree" style="display: none; margin-bottom:15px" alt="demo">
+    {{/if}}
+
+
+    <div style="position: relative">
+        <img src="images/viewbar.jpg" alt="demo" usemap="#aaads" border="0">
+        <map name="aaads" id="aaads">
+            <area onclick="toggle('#rulesgroups')" shape="rect" coords="221,6,343,39" href="javascript:">
+            <area onclick="toggle('#vbardropd')" shape="rect" coords="1158,6,1195,39" href="javascript:">
+        </map>
+
+
+        <a class="filtertype" onclick="swap('.listfbutton','.filteron, .listfilter')" href="javascript:">
+            <img class="listfbutton" src="images/viewbar_filter.jpg" alt="demo">
+            {{#if p_assets}}
+            <img class="filteron" style="display: none"
+                 src="images/machines_filter_on.jpg" alt="demo">
+            {{/if}}
+
+            {{#if p_users}}
+            <img class="filteron" style="display: none" src="images/users_filter_on.jpg"
+                 alt="demo">
+            {{/if}}
+            {{#if p_groups}}
+            <img class="filteron" style="display: none" src="images/groups_filter_on.jpg"
+                 alt="demo">
+            {{/if}}
+            {{#if p_events}}
+            <img class="filteron" style="display: none" src="images/events_filter_on.jpg"
+                 alt="demo">
+            {{/if}}
+        </a>
+    </div>
+
+
+
+    {{#if p_assets}}
+        <img class="listfilter" style="display: none" src="images/machines_filter_opened.jpg" alt="demo">
+    {{/if}}
+    {{#if p_users}}
+        <img class="listfilter" style="display: none" src="images/users_filter_filteropen.jpg"  alt="demo">
+    {{/if}}
+    {{#if p_groups}}
+        <img class="listfilter" style="display: none" src="images/groups_filters.jpg" alt="demo">
+    {{/if}}
+    {{#if p_events}}
+        <img class="listfilter" style="display: none" src="images/events_filter_opened.jpg" alt="demo">
+    {{/if}}
+
+    {{#if p_groups}}
+        <img id="rulesgroups" src="images/groups_open_single.jpg" style="display: none" alt="demo" usemap="#rulesgroupsMap" border="0">
+    {{else}}
+        <img id="rulesgroups" src="images/groups_open_multi.jpg" style="display: none" alt="demo" usemap="#rulesgroupsMap" border="0">
+    {{/if}}
+    <map name="rulesgroupsMap" id="rulesgroupsMap">
+        <area onclick="hide('#rulesgroups')" shape="rect" coords="1014,399,1186,427" href="javascript:"/>
+    </map>
+
+
+    <img id="vbardropd" class="vdropdown" style="display: none" src="images/viewbar_dropdown.png" alt="demo" usemap="#viewbardropd" border="0">
+
+    <img src="images/viewbar_saveview.png" alt="demo" usemap="#vbarsaveMap" style="display:none;  position: absolute; top:-60px; left:270px;" id="vbarsave" border="0">
+    <map name="vbarsaveMap" id="vbarsaveMap">
+        <area onclick="hide('#vbarsave')" shape="rect" coords="620,13,685,58" href="javascript:"/>
+        <area onclick="hide('#vbarsave')" shape="rect" coords="351,143,512,184" href="javascript:"/>
+      <area onclick="show('.tagbar'); hide('#vbarsave')" shape="rect" coords="513,142,674,183" href="javascript:"/>
+    </map>
+
+    <map name="viewbardropd" id="viewbardropd">
+        <area onclick="toggle('.tagbar'); hide('#vbardropd')" shape="rect" coords="5,34,154,64" href="javascript:"/>
+        <area onclick="show('#vbarsave'); hide('#vbardropd')" shape="rect" coords="5,4,154,34" href="javascript:"/>
+    </map>
+
+
+</div>
+
+
+<style>
+    .listhead {
+        width: 1200px;
+        position: relative;
+        text-align: center;
+        z-index: 100;
+        margin: 20px auto 15px;
+    }
+
+    .vdropdown {
+        position: absolute;
+        top:47px;
+        right: 0;
+        z-index: 100;
+        display: none;
+    }
+
+    .filtertype {
+        position: absolute;
+        bottom: 0;
+        right: 53px;
+        z-index: 100;
+    }
+
+</style>

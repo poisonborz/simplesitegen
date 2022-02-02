@@ -1,0 +1,82 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>example</title>
+    <link href="styles/style.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript" src="scripts/cookieHandler.js"></script>
+    <script type="text/javascript" src="scripts/maphighlight.js"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+</head>
+
+<body>
+
+    <nav class="wfheader">
+        <div class="wfheader__wrap">
+            <p>Simplesitegen asset manager demo</p>
+
+                <a href="_list.html">List of pages</a>
+            <a id="toggleHighlighting" onclick="switchHighlighting(getCookie('wfhighlight') !== 'true', this)">Highlight clickable items</a>
+            <a id="toggleNotes" onclick="switchNotes(getCookie('wfnotes') !== 'true',this)">Toggle notes</a>
+        </div>
+    </nav>
+
+    <div class="main">
+
+<div class="header">
+    <img src="images/header.jpg" alt="demo" usemap="#ftttff" class="header_bck" border="0">
+    <map name="ftttff" id="ftttff">
+        <area shape="rect" coords="1267,27,1293,49" href="index.html" />
+        <area shape="rect" coords="1196,28,1265,49" href="settings.html" />
+      <area shape="rect" coords="1124,27,1193,48" href="support.html" />
+    </map>
+    <div class="header_menu">
+        <a id="menu1" style="width:90px" class=""  href="assets.html"></a>
+        <a id="menu2" style="width:106px" class="" href="users.html"></a>
+        <a id="menu4" style="width:100px" class="" href="groups.html"></a>
+        <img src="images/header_menu.png" alt="demo">
+    </div>
+
+</div>
+
+<style>
+    .header {
+        position: relative;
+    }
+    .header_bck {
+        display: block;
+    }
+
+    .header_menu {
+        position: absolute;
+        top: 24px;
+        left: 318px;
+    }
+
+    .header_menu img {
+        position: absolute;
+        top: 0;
+        z-index: 0;
+    }
+    .header_menu a {
+        display: inline-block;
+        vertical-align: top;
+        height: 29px;
+        position: relative;
+        z-index: 10;
+    }
+
+    .header_menu a.clicked {
+        opacity: .8;
+        background: #f4f4f4f4;
+    }
+</style>
+
+<img src="images/settings.jpg" style="margin: 40px auto"  alt="demo">
+
+
+<img src="images/footer.jpg" style="margin: 40px auto 0" alt="demo">
+    </div>
+
+</body>
+</html>

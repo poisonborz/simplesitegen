@@ -1,0 +1,42 @@
+
+
+
+<div class="users">
+    {{#if m_single}}
+        <img id="usingle" class="uedit" src="images/user_manage_single.jpg" usemap="#gwer345eh54" alt="demo">
+    {{/if}}
+    {{#if m_multi}}
+        <img id="umulti" class="uedit" src="images/user_manage_multi.jpg" usemap="#gwer345eh54" alt="demo">
+    {{/if}}
+
+    <img id="uaddnew" src="images/user_manage_addnew.jpg" style="display: none" usemap="#gwer345eh54" alt="demo">
+
+    <img id="multgroup" class="tcgroup" src="images/groups_open_multi_restricted.jpg" alt="demo" usemap="#mmap" style="display: none"
+         border="0">
+
+    <map name="mmap" id="mmap">
+        <area onclick="toggle('#multgroup')" shape="rect" coords="1016,399,1184,428" href="javascript:"/>
+    </map>
+
+    <map name="gwer345eh54" id="gwer345eh54">
+        <area onclick="hide('#usingle, #umulti,.list,.listcontrol,.listhead'); show('#uaddnew,.addnewtext')" shape="rect" coords="1074,2,1202,31" href="javascript:" />
+        <area onclick="toggle('#multgroup')" shape="rect" coords="13,112,380,144" href="javascript:"/>
+      <area  onclick="show('.uedit,.list,.listcontrol,.listhead'); hide('#uaddnew,.addnewtext')" shape="rect" coords="913,110,1188,146" href="javascript:"/>
+    </map>
+
+</div>
+
+
+<style>
+
+    .users {
+        width: 1200px;
+        margin: 15px auto 0;
+    }
+
+    .listwrap {
+        height: 300px !important;
+        overflow: hidden;
+    }
+
+</style>
