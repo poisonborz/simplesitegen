@@ -85,7 +85,7 @@ map {
     font-weight: bold;
     float: left;
     margin-top: 10px;
-    color: rgba(255,255,255,.4);
+    color: #fff;
 }
 
 .wfheader .wfheader__wrap {
@@ -97,7 +97,7 @@ map {
 
 .wfheader a {
     width: 225px;
-    color: rgba(255,255,255,.4);
+    color: #fff;
     display: inline-block;
     float: right;
     text-align: center;
