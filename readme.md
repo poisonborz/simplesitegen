@@ -36,7 +36,7 @@ then add maps for links. You can create maps easily online or with offline apps 
 
 # Syntax:
  
-`node wireframe.js --product=example --OP --title=Example prototype --templateFileType=html --resDirs=folder,folder/subfolder`
+`node simplesitegen.js --product=example --OP --title=Example prototype --templateFileType=html --resDirs=folder,folder/subfolder`
 
 * **product** (required) a folder within the src directory
 * **OP** (optional | build) leave it empty or `--build` to process the whole folder once. 
